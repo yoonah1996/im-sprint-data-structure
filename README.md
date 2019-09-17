@@ -53,6 +53,4 @@
 ## 제출 방법
 
 1. student.json 파일에 필요한 정보를 입력합니다.
-2. REVIEW.md 파일에 이번 Sprint를 마무리하며 review를 작성합니다.
-3. 자신의 remote repo로 push 합니다.
-4. Upstream repo에서 pull request를 만듭니다.
+2. 터미널에서 `npm run submit` 으로 제출합니다. 제출이 성공적으로 되는지 결과 텍스트를 확인합니다.
