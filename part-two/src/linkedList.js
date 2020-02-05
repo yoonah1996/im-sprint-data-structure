@@ -13,12 +13,8 @@ const LinkedList = function() {
 };
 
 const Node = function(value) {
-  const node = {};
-
-  node.value = value;
-  node.next = null;
-
-  return node;
+  this.value = value;
+  this.next = null;
 };
 
 /*
