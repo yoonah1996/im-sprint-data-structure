@@ -15,8 +15,7 @@ exec("jest --json", (err, json, stderr) => {
     path: `/Prod/submit/`,
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "x-api-key": URCLASS_KEY
+      "Content-Type": "application/json"
     }
   };
 
