@@ -1,4 +1,4 @@
-const Queue = function () {
+const Queue = function() {
   const someInstance = {};
 
   // Use an object with numeric keys to store values
@@ -6,16 +6,16 @@ const Queue = function () {
 
   // Implement the methods below
 
-  someInstance.enqueue = function (value) {};
+  someInstance.enqueue = function(value) {};
 
-  someInstance.dequeue = function () {};
+  someInstance.dequeue = function() {};
 
-  someInstance.size = function () {};
+  someInstance.size = function() {};
 
   return someInstance;
 };
 
-if (typeof module === 'object' && typeof module.exports === 'object') {
+if (typeof module === "object" && typeof module.exports === "object") {
   module.exports = {
     Queue
   };
