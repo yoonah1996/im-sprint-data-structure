@@ -1,27 +1,31 @@
 const LinkedList = function() {
   const list = {};
-  // list.head = null;
-  // list.tail = null;
-
-  // list = {
-  //   // head: null,
-  //   // tail: null,
-  //   first: {
-  //     value: 5,
+  list.head = null;
+  list.tail = null;
+  // tail: {
+  //   value: 5,
+  //   next: {
+  //     value: 6,
   //     next: {
-  //       value: 10,
-  //       next: null;
+  //       value: 7,
+  //       next: null
   //     }
-  //   }
+  //   };
   // }
 
+
   list.addToTail = function(value) {
-    if(!list.first){
-      list.first = new Node(value);
+    if(list.tail === null){
+      list.tail = new Node(value);
+      return value;
+    }else{
+      let recursion = list.tail.next;
+      while(recursion !== null){
+        recursion = recursion.next;
+      }
+      recursion = new Node(value);
       return value;
     }
-    list.first.next = new Node(value);
-    return value;
   };
 
   list.removeHead = function() {};
