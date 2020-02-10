@@ -7,6 +7,7 @@ const Queue = function() {
   return result;
 };
 
+
 const queueMethods = {};
 queueMethods.enqueue = function(value){
   this.storage[this.count] = value;
@@ -23,7 +24,6 @@ queueMethods.dequeue = function(){
 queueMethods.size = function(){
   return Object.keys(this.storage).length;
 }
-
 
 module.exports = {
   Queue,

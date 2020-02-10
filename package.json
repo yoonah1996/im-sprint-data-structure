@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "test:part-one": "jest part-one/",
-    "test1": "jest part-one/",
+    "test1": "jest part-two/linkedList.js",
     "test:part-two": "jest part-two/",
     "precommit": "lint-staged",
     "lint": "eslint part-one/src part-two/src --quiet",

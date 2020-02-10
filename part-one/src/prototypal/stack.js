@@ -20,7 +20,6 @@ stackMethods.size = function(){
 }
 
 const Stack = function() {
-  
   var result = Object.create(stackMethods);
   result.storage = {};
   result.count = 0;
