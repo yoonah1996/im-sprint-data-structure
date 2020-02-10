@@ -5,18 +5,13 @@
   "scripts": {
     "test": "jest",
     "test:part-one": "jest part-one/",
+    "test1": "jest part-one/",
     "test:part-two": "jest part-two/",
     "precommit": "lint-staged",
     "lint": "eslint part-one/src part-two/src --quiet",
     "submit": "node .travis/submit.js"
   },
   "lint-staged": {
-    "linters": {
-      "*.js": [
-        "eslint",
-        "git add"
-      ]
-    },
     "ignore": [
       "node_modules/",
       "**/__test__/*.js"
@@ -24,7 +19,9 @@
   },
   "author": "Codestates",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "jshint": "^2.11.0"
+  },
   "devDependencies": {
     "colors": "^1.3.3",
     "eslint": "^6.8.0",
