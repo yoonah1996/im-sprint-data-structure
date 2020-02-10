@@ -2,43 +2,25 @@ const LinkedList = function() {
   const list = {};
   list.head = null;
   list.tail = null;
-  // tail: {
-  //   value: 5,
-  //   next: {
-  //     value: 6,
-  //     next: {
-  //       value: 7,
-  //       next: null
-  //     }
-  //   };
-  // }
-  // const rec = function(obj){
-  //   return obj.next;
-  // }
 
   list.addToTail = function(value) {
+    let node = new Node(value);
     if(list.head === null){
-      list.head = new Node(value);
-      list.tail = new Node(value);
-      return value;
+      this.head = node;
     }else{
-      // if(list.next === null){
-      //   list.next = new Node(value);
-      //   list.tail = new Node(value);
-      //   return value;
-      // }else{
-        this.next = new Node(value);
-        list.tail = new Node(value);
-        return value;
-      // }
+      this.tail.next = node;
     }
+    this.tail = node;
     
   };
 
   list.removeHead = function() {
-    let result = list.head.value;
-    list.head = list.next;
-    return result;
+    //1. 안에 아무 값도 없을때 
+    //2. 안에 하나만 있을때 
+    //3. 여러 값이 들어있을때 =>
+    let result = list.head;
+    list.head = list.head.next;
+    return result.value;
   };
 
   list.contains = function(target) {
@@ -46,7 +28,7 @@ const LinkedList = function() {
     if(list.head.value === target){
       return true;
     }
-      let result = list.next;
+      let result = list.head.next;
       while(result !== null){
         if(result.value === target){
           return true;
