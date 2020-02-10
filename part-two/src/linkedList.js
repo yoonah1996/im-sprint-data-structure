@@ -12,26 +12,49 @@ const LinkedList = function() {
   //     }
   //   };
   // }
-
+  // const rec = function(obj){
+  //   return obj.next;
+  // }
 
   list.addToTail = function(value) {
-    if(list.tail === null){
+    if(list.head === null){
+      list.head = new Node(value);
       list.tail = new Node(value);
       return value;
     }else{
-      let recursion = list.tail.next;
-      while(recursion !== null){
-        recursion = recursion.next;
-      }
-      recursion = new Node(value);
-      return value;
+      // if(list.next === null){
+      //   list.next = new Node(value);
+      //   list.tail = new Node(value);
+      //   return value;
+      // }else{
+        this.next = new Node(value);
+        list.tail = new Node(value);
+        return value;
+      // }
     }
+    
   };
 
-  list.removeHead = function() {};
+  list.removeHead = function() {
+    let result = list.head.value;
+    list.head = list.next;
+    return result;
+  };
 
-  list.contains = function(target) {};
-
+  list.contains = function(target) {
+    
+    if(list.head.value === target){
+      return true;
+    }
+      let result = list.next;
+      while(result !== null){
+        if(result.value === target){
+          return true;
+        }
+        result = result.next;
+    } 
+    return false;
+  };
   return list;
 };
 
