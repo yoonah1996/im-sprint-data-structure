@@ -4,6 +4,7 @@ const Graph = function() {
 
 };
 
+
 const Node = function(value) {
     this.value = value;
     this.next = null;

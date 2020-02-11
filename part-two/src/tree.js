@@ -1,9 +1,20 @@
 const Tree = function(value) {
-  const newTree = Object.create(treeMethods);
+  const newTree = {};
   newTree.value = value;
-  newTree.children = null; // fix me
+  newTree.children = null;
+
+  extend(newTree, treeMethods);
   return newTree;
 };
+
+
+var extend = function(to, from){
+  for (var key in from){
+    to[key] = from[key];
+  }
+};
+
+
 const treeMethods = {};
 treeMethods.addChild = function(value) {
   let node = new Node(value);
