@@ -5,13 +5,15 @@ const LinkedList = function() {
 
   list.addToTail = function(value) {
     let node = new Node(value);
-    if(list.head === null){
-      this.head = node;
-    }else{
-      this.tail.next = node;
-    }
-    this.tail = node;
     
+    if(list.head === null) {
+      list.head = node;
+      list.tail = list.head;
+    }
+    else{
+      list.tail.next = node;
+      list.tail = list.tail.next
+    }
   };
 
   list.removeHead = function() {
